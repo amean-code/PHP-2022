@@ -1,0 +1,22 @@
+.btn-primary:hover,
+.banner-sec h1 .orange,
+.contact-sec .contact-list .icon-holder,
+#footer .social-icons a:hover,
+.work-sec .txt-holder h3 a:hover,
+.contact-sec .contact-list .wrap a:hover,
+.contact-form .btn-primary:hover {
+  color: #ef4836; }
+
+.btn-primary,
+#nav li:after,
+.work-sec .txt-holder .icon,
+.resume-sec .wrap .duration,
+.heading:after,
+#header .logo a,
+#nav li a:hover,
+#nav ul .anchor-active a {
+  background-color: #ef4836; }
+
+.btn-primary,
+.chart {
+  border-color: #ef4836; }
