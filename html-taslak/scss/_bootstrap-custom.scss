@@ -1,0 +1,53 @@
+  // custom variables and override bootstrap variables
+
+//== Colors
+$black:											#000;
+$white:											#fff;
+$clr-1:											#ef4836;
+$clr-2:											#171717;
+$clr-3:											#4b4b4b;
+$clr-4:											#838383;
+$clr-5:											#b9b9b9;
+$clr-6:											#bdbdbd;
+$clr-7:											#131313;
+$clr-8:											#f3f3f3;
+$clr-9:											#7e7e7e;
+$clr-10:										#333333;
+$clr-11:										#d0d0d0;
+$clr-12:										#acacac;
+$clr-13:										#797979;
+$clr-14:										#aaaaaa;
+$clr-15:										#e3e3e3;
+$clr-16:										#232323;
+$clr-17:										#bcbcbc;
+$clr-18:										#1e1e1e;
+$clr-19:										#f7f7f7;
+$clr-20:										#141820;
+
+
+
+
+//== Scaffolding
+$text-color:									$clr-2;
+$link-color:									$black;
+
+//== Typography
+$font-family-sans-serif:						'proxima_novaregular', Helvetica, Arial, sans-serif;
+$heading-font-family-sans:						'uni_sansheavy_caps', "Helvetica Neue", Helvetica, Arial, sans-serif;
+
+$font-size-base:								18px;
+$line-height-base:								2.250;
+$headings-font-family:							$heading-font-family-sans;
+$headings-font-weight:							700;
+$headings-color:								$black;
+
+
+
+//== Forms
+$input-bg:										$black;
+$input-color:									$black;
+//$input-border:								$clr11;
+$input-border-radius:							0;
+//$input-border-focus:							$clr3;
+$input-color-placeholder:						$black;
+$form-group-margin-bottom:						16px;
