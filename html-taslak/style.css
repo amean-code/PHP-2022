@@ -305,7 +305,7 @@ a:hover, a:focus, a.active {
   bottom: auto;
   right: auto;
   content: attr(data-heading);
-  font-size: 190px;
+  font-size: 150px;
   line-height: 40px;
   font-weight: 700;
   opacity: 1;
