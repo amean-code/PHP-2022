@@ -43,6 +43,16 @@ url("../fonts/icofont.woff") format("woff");
   content: "\eec2";
 }
 
+.icofont-code:before
+{
+  content: "\eeea";
+}
+
+.icofont-code-branch:before
+{
+  content: "\F126";
+}
+
 .icofont-phone:before
 {
   content: "\efbb";
