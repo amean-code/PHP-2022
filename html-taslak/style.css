@@ -170,7 +170,7 @@ a:hover, a:focus, a.active {
 .heading3 {
   font-size: 20px;
   line-height: 22px;
-  color: #fff;
+  color: rgb(0, 0, 0);
   margin: 0 0 23px;
   position: relative;
   z-index: 1;
@@ -244,7 +244,7 @@ a:hover, a:focus, a.active {
   top: -9999px;
   bottom: -9999px;
   right: 0;
-  background: #fff;
+  background: #393838;
 }
 
 #nav ul {
@@ -256,7 +256,7 @@ a:hover, a:focus, a.active {
 }
 
 #nav ul a {
-  color: #4b4b4b;
+  color: rgb(36, 35, 35);
   padding: 15px;
   display: block;
 }
