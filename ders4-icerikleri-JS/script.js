@@ -5,8 +5,8 @@ console.log("Merhaba Dünya!");
 // alert("AMEAN Danışmanlık Süper!");
 
 // Değişken Tanımalamak
-let isim = "Emin";
-let yas = 23;
+let isim = "Furkan";
+let yas = 25;
 
 const YIL = 2022;
 
