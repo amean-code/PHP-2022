@@ -1,0 +1,839 @@
+/*
+Theme Name: Exo Portfolio HTML Template
+Author: Htmlbeans
+Author URI: https://themeforest.net/user/Htmlbeans
+Version: 1
+Description: Base theme for HTML5
+Text Domain: base
+Tags: one-column, two-columns, three-columns
+Theme URI: http://www.htmlbeans.com/html/exo-portfolio/
+*/
+
+/*------------------------------------------------------------------
+
+1. import files / import files
+2. Body / body
+3. Wrapper / #wrapper
+4. Heading / heading
+5. Heading2 / heading2
+6. Heading3 / heading3
+7. Header / #header
+8. Btn-primary / btn-primary
+9. Nav / #nav
+10. Main / #main
+11. Banner-Sec / banner-sec
+12. Work-Sec / work-sec
+13. About-sec / about-sec
+14. Service-Sec / servive-sec
+15. Skills-Sec / skill-sec
+16. Resume-Sec / resume-sec
+17. Testimonial / testimonial
+18. Client-Slider / client-slider
+19. Contact-Sec / contact-sec
+20. Contact-Form / contact-form
+21. Footer / #footer
+
+-------------------------------------------------------------------*/
+
+// devices viewport width starts at:
+$breakpoints: (
+	xs-phone: 480px,
+	phone: 640px,
+	tablet: 768px,
+	desktop: 992px,
+	widescreen: 1200px
+);
+ 
+// keywords
+$media-expressions: (
+	'screen': 'screen',
+	'print': 'print',
+	'handheld': 'handheld',
+	'landscape': '(orientation: landscape)',
+	'portrait': '(orientation: portrait)',
+	'retina2x': '(-webkit-min-device-pixel-ratio: 1.5), (min-resolution: 144dpi)',
+	'retina3x': '(-webkit-min-device-pixel-ratio: 2.5), (min-resolution: 240dpi)'
+);
+
+// ligatured operators ≥ ≤
+
+
+/*------------------------------------------------------------------
+1. import files / import files
+-------------------------------------------------------------------*/
+
+//@import 'vendors/include-media';
+
+@import "bootstrap-custom";
+@import "vendors/bootstrap/variables";
+@import "vendors/bootstrap/mixins";
+
+@import 'base/mixins';
+@import 'base/helpers';
+
+
+/*------------------------------------------------------------------
+2. Body / body
+-------------------------------------------------------------------*/
+body{
+	padding : 0;
+	margin: 0; 
+}
+@font-face {
+    font-family: 'proxima_novaregular';
+    src: url('fonts/proximanova-regular.woff2') format('woff2'),
+         url('fonts/proximanova-regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'uni_sansheavy_caps';
+    src: url('fonts/uni_sans_heavy-webfont.woff2') format('woff2'),
+         url('fonts/uni_sans_heavy-webfont.woff') format('woff');
+    font-weight: 900;
+    font-style: normal;
+}
+/*------------------------------------------------------------------
+3. Wrapper / #wrapper
+-------------------------------------------------------------------*/
+#wrapper{ @extend %boxreset; }
+a{
+    &:hover,
+    &:focus,
+    &.active{
+        text-decoration: none;
+        outline: none;
+    }
+}
+.bg-full{
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+.overlay{
+	position: relative;
+	&:after{
+		@include element(0,0,0,0);
+		z-index: 0;
+		background: rgba(19, 19, 19, 0.9);
+	}
+}
+/*------------------------------------------------------------------
+4. Heading / heading
+-------------------------------------------------------------------*/
+.heading{
+	@include font(36px, 40px);
+	padding: 0 0 22px;
+	color: $clr-7;
+	margin: 0 0 80px;
+	position: relative;
+	z-index: 1;
+	&:after{
+		@include element(auto,auto,0,0);
+		@include size(55px, 5px);
+		@extend %transition;
+	}
+	&:before{
+		@include element(0, auto, auto, 0);
+		content: attr(data-heading);
+		@include font(190px, 40px);
+		font-weight: 700;
+	}
+}
+/*------------------------------------------------------------------
+5. Heading2 / heading
+-------------------------------------------------------------------*/
+.heading2{
+	@include font(18px, 20px);
+	font-family: $font-family-sans-serif;
+	margin: 0 0 10px;
+}
+/*------------------------------------------------------------------
+6. Heading3 / heading
+-------------------------------------------------------------------*/
+.heading3{
+	@include font(20px, 22px);
+	color:$white;
+	margin: 0 0 23px;
+	position: relative;
+	z-index: 1;
+	&:before{
+		@include element(17px,auto,auto,-25px);
+		content: attr(data-heading);
+		font-weight: 900;
+		@include font(80px, 36px);
+		color:$clr-16;
+		font-family: 'uni_sansheavy_caps', sans-serif;
+	}
+}
+/*------------------------------------------------------------------
+7. Header / #header
+-------------------------------------------------------------------*/
+#header{
+	overflow: hidden;
+	position: absolute;
+	left: 0;
+	top: 0;
+	right: 0;
+	padding: 56px 0 0;
+	z-index: 2;
+	.logo{
+		overflow: hidden;
+		font-family: 'Dosis', sans-serif;
+		@include font(16px, 18px);
+		a{
+			display: inline-block;
+			color: $white;
+			padding: 6px 25px 7px; 
+		}
+	}
+}
+/*------------------------------------------------------------------
+9. Nav / #nav
+-------------------------------------------------------------------*/
+#nav{
+	@include font(14px, 17px);
+	font-weight: 600;
+	z-index: 2;
+	width: 120px;
+	position: fixed;
+	top: 50%;
+	right: 0;
+	text-align: center;
+	transform: translateY(-50%);
+	&:before{
+		@include element(-9999px, 0, -9999px, 0);
+		background: $white;
+	}
+	ul{
+		margin: 0;
+		.anchor-active{ a{ color: $white; } }
+		a{
+			color:$clr-3;
+			padding: 15px;
+			display: block;
+			@extend %transition;
+			&:hover{ color: $white; }
+		}
+	}
+}
+/*------------------------------------------------------------------
+10. Main / #main
+-------------------------------------------------------------------*/
+#main{overflow: hidden;}
+/*------------------------------------------------------------------
+11. Banner-Sec / banner-sec
+-------------------------------------------------------------------*/
+.banner-sec{
+	overflow: hidden;
+	padding: 224px 0 0;
+	background: $clr-7;
+	.caption{
+		color: $white;
+		@include font(27px, 40px);
+		@extend %clearfix;
+	}
+	h1{
+		@include font(80px, 90px);
+		color: $white;
+		margin: 0 0 18px;
+		position: relative;
+		z-index: 1;
+		&:before{
+			@include element(-12px,auto,auto,-261px);
+			content: attr(data-heading);
+			@include font(190px, 40px);
+			font-weight: 700;
+			opacity: 1;
+			width: 1304px;
+			color: $clr-2;
+		}
+	}
+	.banner-img{
+		overflow: hidden;
+		position: relative;
+		width: 807px;
+		z-index: 1;
+		margin: -103px 0 0 80px;
+	}
+}
+/*------------------------------------------------------------------
+12. Work-Sec / work-sec
+-------------------------------------------------------------------*/
+.work-sec{
+	overflow: hidden;
+	padding: 110px 0 75px;
+	@extend %transition;
+	&:hover{
+		.heading{
+			@extend %transition;
+			&:after{
+				transition-duration: 1.5s;
+				-webkit-transition-duration: 1.5s;
+				width: 100px;
+			}
+		}
+	}
+	.heading{
+		&:before{
+			top:-5px;
+			left:-234px;
+			color:$clr-19;
+		}
+	}
+	.product-img{
+		overflow: hidden;
+		width:100%;
+		margin: 0 0 35px;
+		&.overlay{
+			&:after{display: none;}
+			&:hover{		
+				&:after{display: block;}
+			}
+		}
+		&:hover{
+			.txt-holder{
+				opacity: 1;
+				visibility: visible;
+				transform: translateY(0);
+				-webkit-transform: translateY(0);
+			}
+		}
+	}
+	.txt-holder{
+		position: absolute;
+		bottom:0;
+		color: $clr-4;
+		z-index: 1;
+		width: 100%;
+		padding: 0 0 13px 34px;
+		@include font(13px, 15px);
+		@extend %transition;
+		-webkit-transform: translateY(153px);
+		transform: translateY(153px);
+		&.small-col{
+			padding: 0 0 18px 20px;
+			font-size:12px;
+			&:before{right:-60px;}
+			.icon{
+				&:before{
+					@include font(27px, 30px);
+					@include element(79px,60px, auto,0);
+					content: "+";
+				}
+			}
+			p{ margin: 0; }
+			h3{
+				@include font(14px, 16px);
+				margin: 0 0 4px;
+			}
+			.icon{
+				font-size: 13px;
+				margin: -30px 19px 0 0;
+			}
+		}
+		h3{
+			@include font(18px, 20px);
+			color:$white;
+			margin: 0 0 10px;
+			a{
+				color:$white;
+				@extend %transition;
+			}
+		}
+		.icon{
+			@include size(100px, 207px);
+			display: block;
+			margin: -46px 27px 26px 0;
+			position: absolute;
+			bottom: -92px;
+			right: -48px;
+			transform: rotate(40deg);
+			-webkit-transform: rotate(40deg);
+			&:before{
+				position: absolute;
+				content: "+";
+				top: 93px;
+				left: 7px;
+				right: 47px;
+				z-index: -1;
+				@include font(34px, 36px);
+				color: $white;
+				transform: rotate(140deg);
+			}
+		}
+	}
+}
+/*------------------------------------------------------------------
+13. About-Sec / about-sec
+-------------------------------------------------------------------*/
+.about-sec{
+	overflow: hidden;
+	padding: 110px 0;
+	background: $clr-7;
+	&:hover{
+		.heading{
+			@extend %transition;
+			&:after{
+				transition-duration: 1.5s;
+				-webkit-transition-duration: 1.5s;
+				width:100px;
+			}
+		}
+	}
+	.heading{
+		color: $white;
+		margin: 0 0 55px;
+		&:before{
+			color: $clr-18;
+			left: -232px;
+			top: -6px;
+		}
+	}
+	.info-detail{
+		color: $clr-5;
+		line-height: 36px;
+		@extend %clearfix;
+		p{ margin: 0 0 53px; }
+	}
+	.info-list{
+		color:$white;
+		line-height: 20px;
+		margin: 0;
+		li{margin: 0 0 16px;}
+	}
+	.author-img{
+		width:100%;
+		margin: 13px 0 0;
+	}
+}
+/*------------------------------------------------------------------
+14. Service-Sec / servive-sec
+-------------------------------------------------------------------*/
+.service-sec{
+	overflow: hidden;
+	padding: 110px 0 90px;
+	z-index: 0;
+	&.overlay{
+		&:after{
+			background:rgba(24, 24, 24, 0.98);
+			z-index: -1;
+		}
+	}
+	.service-col{
+		@extend %clearfix;
+		@include font(15px, 29px);
+		color:$clr-17;
+	}
+	.text{
+		display: block;
+		position: relative;
+		z-index: 1;	
+		margin: 0 0 20px;
+	}
+}
+/*------------------------------------------------------------------
+15. Skills-Sec / skill-sec
+-------------------------------------------------------------------*/
+.skill-sec{
+	overflow: hidden;
+	padding: 110px 0;
+	border: 2px solid $clr-8;
+	&:hover{
+		.heading{
+			@extend %transition;
+			&:after{
+				transition-duration: 1.5s;
+				-webkit-transition-duration: 1.5s;
+				width: 100px;
+			}
+		}
+	}
+	&:after{
+		@include element(47px,auto,auto, 0);
+		@include size(575px,139px);
+		z-index: -2;
+		background-image: url(../images/img18.png);
+	}
+	.chart {
+	    position: relative;
+	    color: $clr-20;
+	    @include size(124px, 124px);
+	    @include font(22px, 24px);
+	    margin: 0 auto 8px;
+	    font-weight: 600;
+	    padding: 50px 0 0;
+	    font-family: $heading-font-family-sans;
+	    canvas{
+	    	position: absolute;
+	    	top: 0;
+	    	left: 50%;
+	    	transform: translateX(-50%);
+	    }
+	}
+	.box{
+		overflow: hidden;
+		.skill{ @include font(17px ,40px); }
+	}
+	.heading{
+		margin: 0 0 79px;
+		&:before{
+			color:$clr-19;
+			left: -235px;
+			top: -5px;
+		}
+	}
+}
+/*------------------------------------------------------------------
+16. Resume-Sec / resume-sec
+-------------------------------------------------------------------*/
+.resume-sec{
+	overflow: hidden;
+	padding: 110px 0;
+	&:hover{
+		.heading{
+			@extend %transition;
+			&:after{
+				transition-duration: 1.5s;
+				-webkit-transition-duration: 1.5s;
+				width:100px;
+			}
+		}
+	}
+	.heading{
+		text-align: right;
+		margin: 0;
+		&:after{
+			left:auto;
+			right:0;
+		}
+		&:before{
+			left:auto;
+			right: -269px;
+			top: -5px;
+			color:$clr-19;
+		}
+	}
+	.icon-block{
+		width: 84px;
+		border:2px solid $clr-7;
+		margin: 4px 0 0;
+		padding: 21px 0 15px;
+		span{
+			@include font(30px, 40px);
+			color:$clr-7;
+		}
+	}
+	.candidate-img{
+		z-index: -1;
+		width:438px;
+		position: relative;
+		margin: -58px 0 0 -62px;
+	}
+	.qualification{
+		margin: 0 0 0 -32px; 
+		.duration{background: $clr-10;}
+	}
+	.skill-list{
+		overflow: hidden;
+		padding-top: 92px;
+		margin-bottom: 0;
+		li{
+			overflow: hidden;
+			margin: 0 0 49px;
+		}
+	}
+	.wrap{
+		overflow: hidden;
+		padding-left:27px; 
+		width:279px;
+		.text{
+			color:$clr-9;
+			display: block;
+			margin: 0 0 18px;
+			@include font(14px, 16px);
+		}
+		.duration{
+			@include font(12px, 14px);
+			padding:7px 0 5px; 
+			display: block;
+			max-width:122px;
+			color:$white;
+		}
+	}
+}
+/*------------------------------------------------------------------
+17. Testimonial / testimonial
+-------------------------------------------------------------------*/
+.testimonial-sec{
+	overflow: hidden;
+	padding:110px 0 95px;
+	z-index: 1;
+	&:hover{
+		.heading{
+			@extend %transition;
+			&:after{
+				transition-duration: 1.5s;
+				-webkit-transition-duration: 1.5s;
+				width:100px;
+			}
+		}
+	}
+	&.overlay{ 
+		&:after{
+			background:rgba(24, 24, 24, 0.98);
+			z-index:-2;
+		}
+	}
+	.heading{
+		color: $white;
+		z-index: 2;
+		margin: 0 0 71px;
+		&:before{
+			color:$clr-18;
+			top: -2px;
+			left: -244px;	
+		}
+	}
+	.testimonial-holder{overflow: hidden;}
+	.client-feedback{
+		overflow: hidden;
+		float: right;
+		width:78.8%;
+		p{margin: 0 0 27px;}
+		.slide{
+			overflow: hidden;
+			color:$clr-11;
+			padding: 41px 0 0 68px;
+			border-left:none;
+			@include font(16px, 30px);
+			margin: 0;
+			.icon{
+				@include font(30px, 32px);
+				position: absolute;
+				z-index: -1;
+				color: $clr-16;
+			}
+			q{
+				font-style: italic;
+				display: block;
+				margin: 0 0 25px;
+				quotes: none;
+			}
+		}
+		.author{
+			display: block;
+			color:$white;
+			font-style: normal;
+			font-weight:600;
+			@include font(18px, 20px);
+			margin: 0 0 3px;
+		}
+		.desination{
+			@include font(14px, 16px);
+			color:$clr-12;
+		}
+	}
+	.client-slider{
+		overflow: hidden;
+		margin: 0;
+		width: 21.2%;
+		float: right;
+		li{
+			width:110px !important;
+			margin: 0 14px 15px 0;
+			float: left;
+			&.slick-current{
+				overflow: hidden;
+				position: relative;
+				&:after{
+					@include element(0,0,0,0);
+					background: rgba($clr-7, 0.66);
+					z-index: 1;
+					border: 4px solid $white;
+				}
+			}
+		}
+	}
+}
+/*------------------------------------------------------------------
+19. Contact-Sec / contact-sec
+-------------------------------------------------------------------*/
+.contact-sec{
+	overflow: hidden;
+	padding: 110px 0;
+	position: relative;
+	&:hover{
+		.heading{
+			@extend %transition;
+			&:after{
+				transition-duration: 1.5s;
+				-webkit-transition-duration: 1.5s;
+				width:100px;
+			}
+		}
+	}
+	.img-holder{
+		position: absolute;
+		bottom: 0;
+		left: 0;
+		width:813px;
+	}
+	.contact-holder{
+		padding: 0 0 0 60px;	
+		margin: 0 0 71px;
+	}
+	.heading{
+		margin: 0 0 73px;
+		&:before{
+			color: $clr-19; 
+			top: -5px;
+			left: -201px;
+		}
+	}
+	.contact-list{
+		overflow: hidden;
+		margin: 0;
+		li{
+			float: left;
+			margin: 0 22px 0 0;
+			&:nth-child(2){ .wrap{ width:151px; } }
+		}
+		.icon-holder{
+			@include font(20px, 27px);
+			display: block;
+			width: 20px;
+		}
+		.wrap{
+			float: left;
+			padding: 0 0 0 17px;
+			width:177px;
+			@include font(16px, 18px);
+			a{
+				display: block;
+				color:$clr-13;
+				@extend %transition;
+			}
+		}
+		.title{
+			@include font(16px, 18px);
+			color:$clr-7;
+			display: block;
+			padding: 2px 0 0;
+			margin:0 0 10px; 
+			font-weight: 700;
+		}
+	}
+}
+/*------------------------------------------------------------------
+20. Contact-Form / contact-form
+-------------------------------------------------------------------*/
+.contact-form{
+	overflow: hidden;
+	label{
+		@include font(16px, 18px);
+		color: $clr-7;
+		display: block;
+		margin: 0 0 16px;
+	}
+	.form-group{
+		overflow: hidden;
+		margin: 0 0 28px;
+		&:nth-child(3){ margin:0 0 20px; }
+	}
+	.form-control{
+		background: none;
+		height: 59px;
+		@include font(14px, 16px);
+		color:$clr-14;
+		border: 1px solid $clr-15;
+		padding: 22px 23px 19px;
+		box-shadow: none;
+		@include placeholder {color: $clr-14;}
+	}
+	
+    .has-error .form-control{
+        color: red;
+        border-color: red;
+        @include placeholder{ color: red; }
+    }
+    .form-message{
+        color: $white;
+        font-size: 11px;
+        font-weight: 600;
+        position: relative;
+        &:after{
+            top: 14px;
+            left: 17px;
+            width: 20px;
+            content: "";
+            height: 20px;
+            border-radius: 50%;
+            position: absolute;
+            text-align: center;
+            font-family: 'FontAwesome';
+        }
+        &.error{
+            margin: 0 0 20px;
+            background: #ff3333;
+            padding: 15px 5px 13px 50px;
+            &:after{
+                content:"\f00d";
+                background: #cc2929;
+            }
+        }
+        &.success{
+            margin: 0 0 20px;
+            background: #698cf0;
+            padding: 15px 5px 13px 50px;
+            &:after{
+                content:"\f00c";
+                background: #5470c0;
+            }
+        }
+    }
+	textarea{
+		&.form-control{
+			min-height: 104px;
+			resize:none;
+		}
+	}
+	.btn-primary{
+		color: $white;
+		border-width: 1px;
+		border-style: solid;
+		padding: 17px 45px;
+		@include font(16px, 18px);
+		@extend %transition;
+		font-weight:700;
+		&:hover{ background:none; }
+	}
+}
+/*------------------------------------------------------------------
+21. Footer / #footer
+-------------------------------------------------------------------*/
+#footer{
+	overflow: hidden;
+	background: $clr-7;
+	padding: 40px 0;
+	.text{
+		@include font(14px , 16px);
+		color: $white;
+		display: block;
+	}
+	.social-icons{
+		@include font(13px , 16px);
+		color:$white;
+		float: right;
+		padding: 3px 0 0;
+		margin: 0;
+		li{
+			float: left;
+			margin:0 0 0 23px; 
+		}
+		a{
+			color: $white;
+			@extend %transition;
+		}
+	}
+}
