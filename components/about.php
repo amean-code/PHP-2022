@@ -18,7 +18,7 @@
             <!-- Author of the page -->
             <div class="col-xs-12 col-sm-4 col-md-offset-1">
                 <div class="author-img">
-                    <img src="images/havva.jpg" class="img-responsive" alt="author image">
+                    <img src="./assets/images/havva.jpg" class="img-responsive" alt="author image">
                 </div>
             </div>
         </div>

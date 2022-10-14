@@ -1,12 +1,12 @@
 <section class="contact-sec" id="contact">
     <div class="img-holder hidden-xs hidden-sm">
-        <img src="images/bg-7.jpg" alt="img description" class="img-responsive">
+        <img src="./assets/images/bg-7.jpg" alt="img description" class="img-responsive">
     </div>
     <div class="container">
         <div class="row">
             <div class="col-xs-12 col-md-8 col-md-offset-5">
                 <div class="contact-holder">
-                    <h3 class="heading text-uppercase" data-heading="contact">Benimle İletişime Geçin</h3>
+                    <h3 class="heading text-uppercase" data-heading="contact">BENİMLE İLETİŞİME GEÇİN</h3>
                     <!-- Contact list of the page -->
                     <ul class="list-unstyled contact-list">
                         <li>

@@ -8,7 +8,7 @@
             </div>
             <div class="col-xs-12 col-sm-7">
                 <div class="banner-img">
-                    <img src="images/bg-4.jpg" alt="banner image" class="img-responsive">
+                    <img src="./assets/images/bg-4.jpg" alt="banner image" class="img-responsive">
                 </div>
             </div>
         </div>

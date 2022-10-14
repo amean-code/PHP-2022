@@ -7,23 +7,23 @@
 	<meta name="description" content="Havva Zeynep Akdemir - Portfolyo">
 	<meta name="author" content="https://github.com/Havvazeynep , havvazeynepakdemir@gmail.com">
 	<meta name="keywords" content="HTML CSS JS Javascript PHP Web Tasarım">
-	<link rel="icon" href="images/icon.png">
+	<link rel="icon" href="./assets/images/icon.png">
 	<!-- Include the site stylesheet -->
 	<link href="https://fonts.googleapis.com/css?family=Dosis:800" rel="stylesheet">
 	<!-- Include the site stylesheet -->
-	<link rel="stylesheet" type="text/css" href="css/fontawesome.css">
+	<link rel="stylesheet" type="text/css" href="./assets/css/fontawesome.css">
 	<!-- Include the site stylesheet -->
-	<link rel="stylesheet" type="text/css" href="css/bootstrap.css">
+	<link rel="stylesheet" type="text/css" href="./assets/css/bootstrap.css">
 	<!-- Include the site stylesheet -->
-	<link rel="stylesheet" type="text/css" href="css/plugins.css">
+	<link rel="stylesheet" type="text/css" href="./assets/css/plugins.css">
 	<!-- Include the site stylesheet -->
-	<link rel="stylesheet" type="text/css" href="css/icofont.css">
+	<link rel="stylesheet" type="text/css" href="./assets/css/icofont.css">
 	<!-- Include the site stylesheet -->
 	<link rel="stylesheet" type="text/css" href="style.css">
 	<!-- include the site stylesheet -->
-	<link rel="stylesheet" href="css/responsive.css">
+	<link rel="stylesheet" href="./assets/css/responsive.css">
 	<!-- Include the site stylesheet -->
-	<link rel="stylesheet" type="text/css" href="css/color.css">
+	<link rel="stylesheet" type="text/css" href="./assets/css/color.css">
 	<!-- Include the site stylesheet -->
 	<style class="color_css"></style>
 </head>
@@ -99,11 +99,11 @@
 		</footer>
 	</div>
 	<!-- Include jQuery -->
-	<script src="js/jquery.js"></script>
+	<script src="./assets/js/jquery.js"></script>
 	<!-- Include jQuery -->
-	<script src="js/plugins.js"></script>
+	<script src="./assets/js/plugins.js"></script>
 	<!-- Include jQuery -->
-	<script src="js/jquery.main.js"></script>
-	<div id="style-changer" data-src="inc/style-changer.html"></div>
+	<script src="./assets/js/jquery.main.js"></script>
+	<div id="style-changer" data-src="./assets/inc/style-changer.html"></div>
 </body>
 </html>

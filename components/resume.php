@@ -32,7 +32,7 @@
             <!-- image sec of the author -->
             <div class="col-xs-12 col-sm-4 col-md-4">
                 <div class="candidate-img">
-                    <img src="images/img4.jpg" class="img-responsive" alt="candidate image">
+                    <img src="./assets/images/img4.jpg" class="img-responsive" alt="candidate image">
                 </div>
             </div>
             <!-- Education list sec of the author -->
