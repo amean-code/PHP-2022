@@ -1,0 +1,183 @@
+body {
+    margin: 0;
+    padding: 0;
+    width: 100vw;
+    min-height: 100vh;
+}
+
+.sidebar {
+    background-color: #45f783;
+    flex: 1;
+    display: flex;
+    gap: 12px;
+    justify-content: space-between;
+    flex-direction: column;
+    padding: 12px;
+}
+
+.logo-container{
+    width: 100%;
+    background-color: red;
+    min-height: 60px;
+    border-radius: 8px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    color: white;
+
+    flex: 1;
+
+}
+
+.link-container{
+    min-height: 150px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+
+    color: palevioletred;
+
+    flex: 4;
+}
+
+.bildirim-container{
+    min-height: 150px;
+    border: 1px solid #D4AC0D;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    flex: 4;
+}
+
+.firsat-container{
+    min-height: 150px;
+    border: 1px solid #808B96;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    flex: 3;
+}
+
+.profil-container{
+    min-height: 100px;
+    border: 1px solid #EC7063;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex: 1;
+}
+
+.link-item{
+
+    width: calc(100% - 1rem);
+
+    background-color: #7D3C98;
+    padding: 0.5rem;
+    border-radius: 8px;
+    color: white;
+}
+
+
+
+/* MAIN CONTAINER BOLUM */
+.main-container{
+    background-color: #d2d2d2;
+    flex: 4;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    gap: 4px;
+}
+
+.header-container{
+    min-height: 100px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background-color: #808B96;
+
+    flex: 1;
+}
+
+.icons-container{
+    min-height: 100px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background-color: #808B96;
+
+    flex: 2;
+}
+
+.mainsection-container{
+    min-height: 100px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    gap: 8px;
+
+    background-color: #808B96;
+
+    flex: 6;
+}
+
+.secondarysection-container{
+    min-height: 100px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background-color: #808B96;
+
+    flex: 4;
+}
+
+.footer-container{
+    min-height: 100px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background-color: #808B96;
+
+    flex: 1;
+}
+
+.chart-section1{
+    border: 1px solid black;
+    height: calc(100% - 24px);
+
+    flex: 1;
+
+    border-radius: 8px;
+    margin: 12px;
+
+}
+
+.chart-section2{
+    border: 1px solid black;
+    height: calc(100% - 24px);
+
+    flex: 2;
+
+    border-radius: 8px;
+    margin: 12px;
+}
